@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Dropdown = ({ options, onSelect }) => {
+const Dropdown = ({ options, onSelect, placeholderText }) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [selectedOption, setSelectedOption] = useState(null)
 
@@ -15,7 +15,7 @@ const Dropdown = ({ options, onSelect }) => {
 	return (
 		<div className="dropdown">
 			<button className="dropdown-toggle" onClick={toggleDropdown}>
-				{selectedOption ? selectedOption.label : "Select an option"}
+				{selectedOption ? selectedOption.label : placeholderText}
 			</button>
 			{isOpen && (
 				<ul className="dropdown-menu">
