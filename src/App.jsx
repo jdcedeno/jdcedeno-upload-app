@@ -32,9 +32,24 @@ function App() {
 							onSelect={handleSelect}
 							placeholderText={"Select Import Name:"}
 						/>
+						<p>Select a manifest that you'd like to import</p>
+						<button>Upload Manifest</button>
+						<p>Elapse Data Checking:</p>
+						<p>No Elapsed Dates!</p>
+						<p>Tolerance Window:</p>
 					</div>
-					<div className="flex-item">Column 2</div>
+					<div className="flex-item">
+						<p>Split schedule using social distancing?</p>
+						<p>Location Checking:</p>
+						<p>All Available!</p>
+						<p>Client:</p>
+					</div>
 				</div>
+				<h3>
+					Data in the import file is correct. Please press Continue to
+					import.
+				</h3>
+				<button>Continue Import</button>
 			</Modal>
 		</>
 	)
