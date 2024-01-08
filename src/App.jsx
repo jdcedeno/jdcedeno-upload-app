@@ -30,6 +30,7 @@ function App() {
 						<Dropdown
 							options={dropOptions1}
 							onSelect={handleSelect}
+							placeholderText={"Select Import Name:"}
 						/>
 					</div>
 					<div className="flex-item">Column 2</div>
