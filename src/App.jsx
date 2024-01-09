@@ -4,6 +4,7 @@ import Modal from "./components/Modal"
 import Dropdown from "./components/Dropdown"
 import FileDrop from "./components/FileDrop"
 import RadioGroup from "./components/RadioGroup"
+import ClockIcon from "./components/ClockIcon"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -57,6 +58,8 @@ function App() {
 							options={dropOptions1}
 							onSelect={handleSelect}
 							placeholderText={"Select Import Name:"}
+							placeholderClass={"small-text"}
+							dropdownToggleClass={"dropdown-toggle"}
 						/>
 						<hr className="division-line align-left" />
 						<p className="small-title">
@@ -66,7 +69,9 @@ function App() {
 						</p>
 						<div className="upload-border">
 							<FileDrop onFileSelect={handleFileSelect} />
-							<button>Upload Manifest</button>
+							<button className="blue-btn">
+								Upload Manifest
+							</button>
 						</div>
 						<hr className="division-line align-left" />
 						<p className="small-title">
@@ -90,12 +95,16 @@ function App() {
 							options={scheduleOptions}
 							onChange={handleRadioChange}
 						/>
+
 						<hr className="division-line align-left" />
+
 						<p className="small-title">
 							<strong>Location Checking:</strong>
 						</p>
 						<p className="small-text-green">All Available!</p>
+
 						<hr className="division-line align-left" />
+
 						<p className="small-title">
 							<strong>Client:</strong>
 						</p>
@@ -104,13 +113,84 @@ function App() {
 							options={clientOptions}
 							onChange={handleRadioChange}
 						/>
+
+						<div className="margin-10px"></div>
+
+						<div className="testing-center-row">
+							<p className="small-text testing-center-text">
+								Testing Center 1
+							</p>
+							<div className="select-client-align">
+								<Dropdown
+									options={dropOptions1}
+									onSelect={handleSelect}
+									placeholderText={"Select Client"}
+									placeholderClass={"select-client"}
+									dropdownToggleClass={
+										"client-dropdown-toggle"
+									}
+								/>
+								<ClockIcon />
+							</div>
+						</div>
+						<div className="testing-center-row">
+							<p className="small-text testing-center-text">
+								Testing Center 2
+							</p>
+							<div className="select-client-align">
+								<Dropdown
+									options={dropOptions1}
+									onSelect={handleSelect}
+									placeholderText={"Select Client"}
+									placeholderClass={"select-client"}
+									dropdownToggleClass={
+										"client-dropdown-toggle"
+									}
+								/>
+								<ClockIcon />
+							</div>
+						</div>
+						<div className="testing-center-row">
+							<p className="small-text testing-center-text">
+								Testing Center 3
+							</p>
+							<div className="select-client-align">
+								<Dropdown
+									options={dropOptions1}
+									onSelect={handleSelect}
+									placeholderText={"Select Client"}
+									placeholderClass={"select-client"}
+									dropdownToggleClass={
+										"client-dropdown-toggle"
+									}
+								/>
+								<ClockIcon />
+							</div>
+						</div>
+						<div className="testing-center-row">
+							<p className="small-text testing-center-text">
+								Testing Center 4
+							</p>
+							<div className="select-client-align">
+								<Dropdown
+									options={dropOptions1}
+									onSelect={handleSelect}
+									placeholderText={"Select Client"}
+									placeholderClass={"select-client"}
+									dropdownToggleClass={
+										"client-dropdown-toggle"
+									}
+								/>
+								<ClockIcon />
+							</div>
+						</div>
 					</div>
 				</div>
-				<h4>
+				<h4 className="data-import-text">
 					Data in the import file is correct. Please press Continue to
 					import.
 				</h4>
-				<button>Continue Import</button>
+				<button className="blue-btn">Continue Import</button>
 			</Modal>
 		</>
 	)

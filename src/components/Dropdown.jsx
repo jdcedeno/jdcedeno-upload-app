@@ -1,6 +1,12 @@
 import React, { useState } from "react"
 
-const Dropdown = ({ options, onSelect, placeholderText }) => {
+const Dropdown = ({
+	options,
+	onSelect,
+	placeholderText,
+	placeholderClass,
+	dropdownToggleClass,
+}) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [selectedOption, setSelectedOption] = useState(null)
 
@@ -14,9 +20,9 @@ const Dropdown = ({ options, onSelect, placeholderText }) => {
 
 	return (
 		<div className="dropdown">
-			<button className="dropdown-toggle" onClick={toggleDropdown}>
+			<button className={dropdownToggleClass} onClick={toggleDropdown}>
 				<div className="dropdown-toggle-text">
-					<p className="small-text">
+					<p className={placeholderClass}>
 						{selectedOption
 							? selectedOption.label
 							: placeholderText}
