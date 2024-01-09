@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Modal from "./components/Modal"
 import Dropdown from "./components/Dropdown"
 import FileDrop from "./components/FileDrop"
+import RadioGroup from "./components/RadioGroup"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -22,6 +23,20 @@ function App() {
 
 	const handleFileSelect = (files) => {
 		console.log(files)
+	}
+
+	const scheduleOptions = [
+		{ label: "Yes", value: "Yes" },
+		{ label: "No", value: "No" },
+	]
+
+	const clientOptions = [
+		{ label: "Single", value: "Single" },
+		{ label: "Multiple", value: "Multiple" },
+	]
+
+	const handleRadioChange = (value) => {
+		console.log("Selected Value: ", value)
 	}
 
 	return (
@@ -68,11 +83,21 @@ function App() {
 								Split schedule using social distancing?
 							</strong>
 						</p>
+						<RadioGroup
+							name="split-schedule"
+							options={scheduleOptions}
+							onChange={handleRadioChange}
+						/>
 						<hr className="division-line align-left" />
 						<p>Location Checking:</p>
 						<p>All Available!</p>
 						<hr className="division-line align-left" />
 						<p>Client:</p>
+						<RadioGroup
+							name="client-radio"
+							options={clientOptions}
+							onChange={handleRadioChange}
+						/>
 					</div>
 				</div>
 				<h4>
