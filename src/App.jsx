@@ -72,9 +72,11 @@ function App() {
 						<p className="small-title">
 							<strong>Elapse Data Checking:</strong>
 						</p>
-						<p className="small-text">No Elapsed Dates!</p>
+						<p className="small-text-green">No Elapsed Dates!</p>
 						<hr className="division-line align-left" />
-						<p className="small-title">Tolerance Window:</p>
+						<p className="small-title">
+							<strong>Tolerance Window:</strong>
+						</p>
 					</div>
 
 					<div className="flex-item-right">
@@ -89,10 +91,14 @@ function App() {
 							onChange={handleRadioChange}
 						/>
 						<hr className="division-line align-left" />
-						<p>Location Checking:</p>
-						<p>All Available!</p>
+						<p className="small-title">
+							<strong>Location Checking:</strong>
+						</p>
+						<p className="small-text-green">All Available!</p>
 						<hr className="division-line align-left" />
-						<p>Client:</p>
+						<p className="small-title">
+							<strong>Client:</strong>
+						</p>
 						<RadioGroup
 							name="client-radio"
 							options={clientOptions}
