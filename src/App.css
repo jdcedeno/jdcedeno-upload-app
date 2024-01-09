@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+p {
+  color: #051d59;
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -20,15 +24,26 @@
 .modal {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .flex-container {
   display: flex;
   justify-content: space-between;
+  width: 800px;
+  margin: 0px 50px;
 }
 
-.flex-item {
+.flex-item-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  padding: 10px;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.flex-item-right {
   flex: 1;
   padding: 10px;
 }
@@ -36,12 +51,18 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 .dropdown-toggle {
   padding: 10px;
   border: 1px solid #ccc;
+  background-color: white;
+  color: #051d59;
+  font-weight: bold;
+  text-align: left;
   cursor: pointer;
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -81,4 +102,88 @@
 .upload-border {
   border-style: solid;
   border-color: gray;
+}
+
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #051d59;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background-color: #253d79;
+}
+
+.x::before,
+.x::after {
+  content: "";
+  display: block;
+  margin-top: -2px;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.x::before {
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+.x::after {
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+.division-line {
+  width: 210px;
+  height: 1px;
+  background-color: #cdcfdc;
+  border: none;
+  border-radius: 25%;
+}
+
+.dropdown-toggle-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.down-arrow {
+  align-self: center;
+  padding-top: 15px;
+}
+
+.down-arrow::before,
+.down-arrow::after {
+  content: "";
+  display: block;
+  margin-top: -2px;
+  width: 10px;
+  height: 2px;
+  background: #051d59;
+  border-radius: 1px;
+}
+
+.down-arrow::before {
+  -webkit-transform: rotate(-45deg) translateX(4.5px);
+  -ms-transform: rotate(-45deg) translateX(4.5px);
+  transform: rotate(-45deg) translateX(4.5px);
+}
+
+.down-arrow::after {
+  -webkit-transform: rotate(45deg) translateX(-4.5px);
+  -ms-transform: rotate(45deg) translateX(-4.5px);
+  transform: rotate(45deg) translateX(-4.5px);
+}
+
+.document-upload-title {
+  color: #051d59;
 }

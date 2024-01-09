@@ -15,7 +15,10 @@ const Dropdown = ({ options, onSelect, placeholderText }) => {
 	return (
 		<div className="dropdown">
 			<button className="dropdown-toggle" onClick={toggleDropdown}>
-				{selectedOption ? selectedOption.label : placeholderText}
+				<div className="dropdown-toggle-text">
+					{selectedOption ? selectedOption.label : placeholderText}
+					<a className="down-arrow"></a>
+				</div>
 			</button>
 			{isOpen && (
 				<ul className="dropdown-menu">

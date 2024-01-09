@@ -29,34 +29,50 @@ function App() {
 			<button onClick={openModal}>upload document</button>
 
 			<Modal show={isModalOpen} onClose={closeModal}>
-				<h1>Document Upload</h1>
+				<div className="modal-close-btn">
+					<a className="x"></a>
+				</div>
+
+				<h2 className="document-upload-title">Document Upload</h2>
+				<hr className="division-line" />
+
 				<div className="flex-container">
-					<div className="flex-item">
+					<div className="flex-item-left">
 						<Dropdown
 							options={dropOptions1}
 							onSelect={handleSelect}
 							placeholderText={"Select Import Name:"}
 						/>
-						<p>Select a manifest that you'd like to import</p>
+						<hr className="division-line" />
+						<p>
+							<strong>
+								Select a manifest that you'd like to import
+							</strong>
+						</p>
 						<div className="upload-border">
 							<FileDrop onFileSelect={handleFileSelect} />
 							<button>Upload Manifest</button>
 						</div>
+						<hr className="division-line" />
 						<p>Elapse Data Checking:</p>
 						<p>No Elapsed Dates!</p>
+						<hr className="division-line" />
 						<p>Tolerance Window:</p>
 					</div>
-					<div className="flex-item">
+
+					<div className="flex-item-right">
 						<p>Split schedule using social distancing?</p>
+						<hr className="division-line" />
 						<p>Location Checking:</p>
 						<p>All Available!</p>
+						<hr className="division-line" />
 						<p>Client:</p>
 					</div>
 				</div>
-				<h3>
+				<h4>
 					Data in the import file is correct. Please press Continue to
 					import.
-				</h3>
+				</h4>
 				<button>Continue Import</button>
 			</Modal>
 		</>
