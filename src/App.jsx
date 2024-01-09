@@ -2,6 +2,7 @@ import "./App.css"
 import React, { useState } from "react"
 import Modal from "./components/Modal"
 import Dropdown from "./components/Dropdown"
+import FileDrop from "./components/FileDrop"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -19,6 +20,10 @@ function App() {
 		console.log("Selected: ", option)
 	}
 
+	const handleFileSelect = (files) => {
+		console.log(files)
+	}
+
 	return (
 		<>
 			<button onClick={openModal}>upload document</button>
@@ -33,7 +38,10 @@ function App() {
 							placeholderText={"Select Import Name:"}
 						/>
 						<p>Select a manifest that you'd like to import</p>
-						<button>Upload Manifest</button>
+						<div className="upload-border">
+							<FileDrop onFileSelect={handleFileSelect} />
+							<button>Upload Manifest</button>
+						</div>
 						<p>Elapse Data Checking:</p>
 						<p>No Elapsed Dates!</p>
 						<p>Tolerance Window:</p>
