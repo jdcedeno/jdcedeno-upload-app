@@ -32,6 +32,7 @@ p {
   justify-content: space-between;
   width: 800px;
   margin: 0px 50px;
+  gap: 50px;
 }
 
 .flex-item-left {
@@ -44,14 +45,18 @@ p {
 }
 
 .flex-item-right {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  padding: 10px;
+  align-items: flex-start;
+  padding-left: 10px;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
   width: 100%;
+  margin-top: 10px;
 }
 
 .dropdown-toggle {
@@ -144,7 +149,7 @@ p {
 }
 
 .division-line {
-  width: 210px;
+  width: 250px;
   height: 1px;
   background-color: #cdcfdc;
   border: none;
@@ -186,4 +191,20 @@ p {
 
 .document-upload-title {
   color: #051d59;
+  font-size: 22pt;
+  margin-bottom: 0px;
+}
+
+.align-left {
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+.small-title {
+  font-size: small;
+}
+
+.small-text {
+  margin: 0px;
+  font-size: small;
 }

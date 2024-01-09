@@ -43,8 +43,8 @@ function App() {
 							onSelect={handleSelect}
 							placeholderText={"Select Import Name:"}
 						/>
-						<hr className="division-line" />
-						<p>
+						<hr className="division-line align-left" />
+						<p className="small-title">
 							<strong>
 								Select a manifest that you'd like to import
 							</strong>
@@ -53,19 +53,25 @@ function App() {
 							<FileDrop onFileSelect={handleFileSelect} />
 							<button>Upload Manifest</button>
 						</div>
-						<hr className="division-line" />
-						<p>Elapse Data Checking:</p>
-						<p>No Elapsed Dates!</p>
-						<hr className="division-line" />
-						<p>Tolerance Window:</p>
+						<hr className="division-line align-left" />
+						<p className="small-title">
+							<strong>Elapse Data Checking:</strong>
+						</p>
+						<p className="small-text">No Elapsed Dates!</p>
+						<hr className="division-line align-left" />
+						<p className="small-title">Tolerance Window:</p>
 					</div>
 
 					<div className="flex-item-right">
-						<p>Split schedule using social distancing?</p>
-						<hr className="division-line" />
+						<p className="small-title">
+							<strong>
+								Split schedule using social distancing?
+							</strong>
+						</p>
+						<hr className="division-line align-left" />
 						<p>Location Checking:</p>
 						<p>All Available!</p>
-						<hr className="division-line" />
+						<hr className="division-line align-left" />
 						<p>Client:</p>
 					</div>
 				</div>

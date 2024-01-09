@@ -16,7 +16,11 @@ const Dropdown = ({ options, onSelect, placeholderText }) => {
 		<div className="dropdown">
 			<button className="dropdown-toggle" onClick={toggleDropdown}>
 				<div className="dropdown-toggle-text">
-					{selectedOption ? selectedOption.label : placeholderText}
+					<p className="small-text">
+						{selectedOption
+							? selectedOption.label
+							: placeholderText}
+					</p>
 					<a className="down-arrow"></a>
 				</div>
 			</button>
