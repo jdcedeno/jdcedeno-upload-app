@@ -6,6 +6,8 @@ import FileDrop from "./components/FileDrop"
 import RadioGroup from "./components/RadioGroup"
 import ClockIcon from "./components/ClockIcon"
 import ToggleSwitch from "./components/ToggleSwitch"
+import UploadedDocument from "./components/UploadedDocument"
+import ImageIcon from "./components/ImageIcon"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -76,6 +78,7 @@ function App() {
 								Upload Manifest
 							</button>
 						</div>
+						<ImageIcon />
 
 						<hr className="division-line align-left" />
 

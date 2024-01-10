@@ -411,3 +411,52 @@ input:checked + .switch:before {
   display: flex;
   gap: 5px;
 }
+
+.image-body {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 10px auto 10px auto;
+  width: 25px;
+  height: 28px;
+  background-color: white;
+  border: solid 2px #f89e26;
+  border-radius: 2px 10px 2px 2px;
+  border-bottom: solid 5px #f89e26;
+}
+
+.image-corner {
+  width: 6px;
+  height: 6px;
+  background-color: #f89e26;
+  border-radius: 0px 100% 0px 50%;
+  transform: translateX(15px);
+}
+
+.image-sun {
+  width: 6px;
+  height: 6px;
+  background-color: #f89e26;
+  border-radius: 100%;
+  transform: translate(3px, -2px);
+}
+
+.image-mountains {
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 9px solid #f89e26;
+  transform: translate(-1px, 2px);
+}
+
+.image-mountains::after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid #f89e26;
+  transform: translateY(-6px);
+}
