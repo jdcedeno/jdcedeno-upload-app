@@ -7,7 +7,7 @@ import RadioGroup from "./components/RadioGroup"
 import ClockIcon from "./components/ClockIcon"
 import ToggleSwitch from "./components/ToggleSwitch"
 import UploadedDocument from "./components/UploadedDocument"
-import ImageIcon from "./components/ImageIcon"
+import ProgressBar from "./components/ProgressBar"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -78,7 +78,7 @@ function App() {
 								Upload Manifest
 							</button>
 						</div>
-						<ImageIcon />
+						<ProgressBar />
 
 						<hr className="division-line align-left" />
 
