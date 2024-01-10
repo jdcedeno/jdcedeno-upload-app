@@ -7,7 +7,6 @@ import RadioGroup from "./components/RadioGroup"
 import ClockIcon from "./components/ClockIcon"
 import ToggleSwitch from "./components/ToggleSwitch"
 import UploadedDocument from "./components/UploadedDocument"
-import ProgressBar from "./components/ProgressBar"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -78,7 +77,10 @@ function App() {
 								Upload Manifest
 							</button>
 						</div>
-						<ProgressBar />
+						<UploadedDocument
+							filename={"placeholder-name.pdf"}
+							filesize={"5 MB"}
+						/>
 
 						<hr className="division-line align-left" />
 
@@ -130,7 +132,7 @@ function App() {
 							onChange={handleRadioChange}
 						/>
 
-						<div className="margin-10px"></div>
+						<div className="margin-20px"></div>
 
 						<div className="testing-center-row">
 							<p className="small-text testing-center-text">

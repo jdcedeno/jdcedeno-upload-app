@@ -40,10 +40,12 @@ const FileDrop = ({ onFileSelect }) => {
 			onDrop={handleDrop}
 		>
 			<FileIcon />
-			<div>
-				Drag & Drop Here Or{" "}
+			<div className="file-upload-text-container">
+				<p className="small-text">Drag & Drop Here Or&nbsp;</p>
 				<label htmlFor="file-upload">
-					<strong>Browse</strong>
+					<p className="small-text">
+						<strong>Browse</strong>
+					</p>
 				</label>
 				<input
 					type="file"

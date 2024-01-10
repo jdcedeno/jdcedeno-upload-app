@@ -1,15 +1,19 @@
 import React from "react"
+import ImageIcon from "./ImageIcon"
+import ProgressBar from "./ProgressBar"
 
 const UploadedDocument = ({ filename, filesize }) => {
 	return (
 		<div className="uploaded-document-container-column">
 			<hr className="full-division-line" />
 			<div className="uploaded-document-container-row">
-				<ImageIcon />
+				<div className="image-icon-container">
+					<ImageIcon />
+				</div>
 				<div className="fileinfo-container">
 					<div className="filename-filesize">
-						<p>{filename}</p>
-						<p>{filesize}</p>
+						<p className="small-text gray-text">{filename}</p>
+						<p className="small-text gray-text">{filesize}</p>
 					</div>
 					<ProgressBar />
 				</div>
