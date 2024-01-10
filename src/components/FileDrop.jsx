@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import FileIcon from "./FileIcon"
 
 const FileDrop = ({ onFileSelect }) => {
 	const [dragActive, setDragActive] = useState(false)
@@ -38,6 +39,7 @@ const FileDrop = ({ onFileSelect }) => {
 			onDragOver={handleDrag}
 			onDrop={handleDrop}
 		>
+			<FileIcon />
 			<div>
 				Drag & Drop Here Or{" "}
 				<label htmlFor="file-upload">
