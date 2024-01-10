@@ -77,6 +77,7 @@ p {
   border: 1px solid #ccc;
   background-color: white;
   width: 100%;
+  z-index: 1;
 }
 
 .dropdown-menu li {
@@ -521,4 +522,8 @@ input:checked + .switch:before {
 
 .gray-text {
   color: #c1c1c1;
+}
+
+.browse-text {
+  cursor: pointer;
 }

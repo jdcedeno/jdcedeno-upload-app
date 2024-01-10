@@ -11,6 +11,10 @@ import UploadedDocument from "./components/UploadedDocument"
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
 
+	const [isUploadedDocument, setUploadedDocument] = useState(false)
+	const [fileName, setFileName] = useState("")
+	const [fileSize, setFileSize] = useState("")
+
 	const openModal = () => setModalOpen(true)
 	const closeModal = () => setModalOpen(false)
 
@@ -26,6 +30,11 @@ function App() {
 
 	const handleFileSelect = (files) => {
 		console.log(files)
+		if (files.length) {
+			setUploadedDocument(true)
+			setFileName(files[0].name)
+			setFileSize(files[0].size)
+		}
 	}
 
 	const scheduleOptions = [
@@ -78,8 +87,9 @@ function App() {
 							</button>
 						</div>
 						<UploadedDocument
-							filename={"placeholder-name.pdf"}
-							filesize={"5 MB"}
+							show={isUploadedDocument}
+							filename={fileName}
+							filesize={fileSize}
 						/>
 
 						<hr className="division-line align-left" />

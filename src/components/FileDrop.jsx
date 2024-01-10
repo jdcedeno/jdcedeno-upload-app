@@ -43,7 +43,7 @@ const FileDrop = ({ onFileSelect }) => {
 			<div className="file-upload-text-container">
 				<p className="small-text">Drag & Drop Here Or&nbsp;</p>
 				<label htmlFor="file-upload">
-					<p className="small-text">
+					<p className="small-text browse-text">
 						<strong>Browse</strong>
 					</p>
 				</label>
