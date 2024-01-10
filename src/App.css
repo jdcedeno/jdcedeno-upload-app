@@ -76,6 +76,7 @@ p {
   margin: 0;
   border: 1px solid #ccc;
   background-color: white;
+  width: 100%;
 }
 
 .dropdown-menu li {
@@ -88,11 +89,15 @@ p {
 }
 
 .drop-zone {
-  border: 2px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #c1c1c1;
   border-radius: 5px;
   padding: 20px;
+  margin: 20px;
   text-align: center;
   cursor: pointer;
+  height: 100px;
 }
 
 .drop-zone.active {
@@ -104,8 +109,10 @@ p {
 }
 
 .upload-border {
-  border-style: solid;
-  border-color: gray;
+  border: solid 1px #c1c1c1;
+  border-radius: 20px;
+  width: 100%;
+  padding-bottom: 15px;
 }
 
 .modal-close-btn {

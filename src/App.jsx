@@ -61,7 +61,9 @@ function App() {
 							placeholderClass={"small-text"}
 							dropdownToggleClass={"dropdown-toggle"}
 						/>
+
 						<hr className="division-line align-left" />
+
 						<p className="small-title">
 							<strong>
 								Select a manifest that you'd like to import
@@ -73,12 +75,16 @@ function App() {
 								Upload Manifest
 							</button>
 						</div>
+
 						<hr className="division-line align-left" />
+
 						<p className="small-title">
 							<strong>Elapse Data Checking:</strong>
 						</p>
 						<p className="small-text-green">No Elapsed Dates!</p>
+
 						<hr className="division-line align-left" />
+
 						<p className="small-title">
 							<strong>Tolerance Window:</strong>
 						</p>

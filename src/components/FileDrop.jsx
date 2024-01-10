@@ -38,17 +38,19 @@ const FileDrop = ({ onFileSelect }) => {
 			onDragOver={handleDrag}
 			onDrop={handleDrop}
 		>
-			Drag & Drop Here Or{" "}
-			<label htmlFor="file-upload">
-				<strong>Browse</strong>
-			</label>
-			<input
-				type="file"
-				id="file-upload"
-				name="file-upload"
-				onChange={handleInputChange}
-				onClick={handleInputChange}
-			/>
+			<div>
+				Drag & Drop Here Or{" "}
+				<label htmlFor="file-upload">
+					<strong>Browse</strong>
+				</label>
+				<input
+					type="file"
+					id="file-upload"
+					name="file-upload"
+					onChange={handleInputChange}
+					onClick={handleInputChange}
+				/>
+			</div>
 		</div>
 	)
 }
