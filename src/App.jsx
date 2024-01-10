@@ -57,7 +57,7 @@ function App() {
 
 			<Modal show={isModalOpen} onClose={closeModal}>
 				<div className="modal-close-btn">
-					<a className="x"></a>
+					<a className="x" onClick={closeModal}></a>
 				</div>
 
 				<h2 className="document-upload-title">Document Upload</h2>
