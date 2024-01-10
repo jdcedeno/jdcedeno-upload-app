@@ -2,7 +2,7 @@ import React from "react"
 
 const RadioButton = ({ label, value, checked, onChange }) => {
 	return (
-		<label className="small-text">
+		<label className="small-text radio-label-padding">
 			<input
 				type="radio"
 				value={value}

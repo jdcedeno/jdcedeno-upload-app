@@ -12,7 +12,7 @@ const RadioGroup = ({ options, name, onChange }) => {
 	}
 
 	return (
-		<div>
+		<div className="radio-padding">
 			{options.map((option) => (
 				<RadioButton
 					key={option.value}
