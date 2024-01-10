@@ -5,6 +5,7 @@ import Dropdown from "./components/Dropdown"
 import FileDrop from "./components/FileDrop"
 import RadioGroup from "./components/RadioGroup"
 import ClockIcon from "./components/ClockIcon"
+import ToggleSwitch from "./components/ToggleSwitch"
 
 function App() {
 	const [isModalOpen, setModalOpen] = useState(false)
@@ -88,6 +89,12 @@ function App() {
 						<p className="small-title">
 							<strong>Tolerance Window:</strong>
 						</p>
+						<div className="toggle-container">
+							<ToggleSwitch />
+							<p>Toggle ON | </p>
+							<ClockIcon />
+							<p>Select Tolerance Level </p>
+						</div>
 					</div>
 
 					<div className="flex-item-right">
